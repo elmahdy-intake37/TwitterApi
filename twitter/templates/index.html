@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Tweet</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if data is mapping%}
+    {% for tweet in data.values() %}
+      <tr>
+        <td>{{ tweet }}</td>
+      </tr>
+      {% endfor %}
+      {% else %}
+      {% for tweet in data %}
+        <tr>
+          <td>{{ tweet }}</td>
+        </tr>
+    {% endfor %}
+    {% endif %}
+  </tbody>
+</table>
